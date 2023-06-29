@@ -1,8 +1,14 @@
 
+import QuoteFrom from '../components/quotes/QuoteForm';
 
 const NewQuote = () => {
+
+    const addQUoteHandler = quoteData => {
+        console.log(quoteData);
+    }
+
     return (
-        <h1>New Quote Page</h1>
+        <QuoteFrom onAddQuote={addQUoteHandler} />
     );
 };
 
