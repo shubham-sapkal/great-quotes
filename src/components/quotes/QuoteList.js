@@ -22,6 +22,7 @@ const QuoteList = (props) => {
   const history = useHistory();
 
   const location = useLocation();
+
   // console.log(location);
 
   // default js class
@@ -34,7 +35,14 @@ const QuoteList = (props) => {
   const changeSortingHandler = () => {
     // update the query url
     // pushng this page render the whole page again
-    history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc')  );
+    // history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc')  );
+    // history.push(`${location.pathname}?sort=${(isSortingAscending ? 'desc' : 'asc') }` );
+  
+    // Alternative way of creating navigation 
+    history.push( {
+      pathname: location.pathname,
+      search: `?sort=${(isSortingAscending ? 'desc' : 'asc') }`
+    } )
   }
 
   return (
