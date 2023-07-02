@@ -6,7 +6,7 @@ const MainNavigation = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>Nonsence Quotes</div>
+            <div className={styles.logo}>Great Quotes</div>
 
             <nav className={styles.nav}>
                 <ul>
